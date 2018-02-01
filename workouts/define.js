@@ -11,18 +11,16 @@ $(function() {
 				};
 				var postData = { definition: def };
 		      	var define = $.ajax({
-
-         	type: "POST",
-	         	url: WorkoutLog.API_BASE + "definition",
-	         	data: JSON.stringify(postData),
-	         	contentType: "application/json"
+					type: "POST",
+					url: WorkoutLog.API_BASE + "definition",
+					data: JSON.stringify(postData),
+					contentType: "application/json"
 		      	});
 
 		      	define.done(function(data) {
 					  WorkoutLog.definition.userDefinitions.push(data.definition);
 					  console.log(data.definition);
-
-					  $("#log-description").val("");
+					  $("#def-description").val("");
 					  $("#def-logtype").val("");
 					  $('a[href="#log"]').tab("show")
 					  console.log(data.definition);
@@ -30,14 +28,14 @@ $(function() {
 		  },
 
 		  fetchAll: function() {
-				  let userId = window.localStorage.getItem("userId")
-				  console.log('userId is:')
-				  console.log(userId)
-			 	var fetchDefs = $.ajax({
-		         type: "GET",
-		         url: WorkoutLog.API_BASE + "definition/" + userId,
-		         headers: {
-		         	"authorization": window.localStorage.getItem("sessionToken")
+				let userId = window.localStorage.getItem("userId")
+				console.log('userId is:')
+				console.log(userId)
+				var fetchDefs = $.ajax({
+				type: "GET",
+				url: WorkoutLog.API_BASE + "definition/" + userId,
+				headers: {
+				"authorization": window.localStorage.getItem("sessionToken")
 		         }
 		      })
 		      .done(function(data) {

@@ -46,7 +46,7 @@ $(function() {
 			},
 			create: function() {
 				var itsLog = { 
-		        	desc: $("#log-description").val(),
+		        	description: $("#log-description").val(),
 		         	result: $("#log-result").val(),
 		         	def: $("#log-definition option:selected").text()
 		      	};
@@ -82,10 +82,10 @@ $(function() {
 					idBeingUpdated = logID;
 					console.log('data returned is:');
 					console.log(data.def);
-					
 					$('a[href="#update-log"]').tab("show");
 					$('#update-result').val(data.result);
 					$('#update-description').val(data.description);
+					console.log(data.description)
 					$('#update-id').val(data.id);
 				});
 
