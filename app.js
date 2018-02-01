@@ -1,7 +1,7 @@
 $(function() {
 
     var WorkoutLog = (function($, undefined) {
-        var API_BASE = "https://work-work-workout-log-api.herokuapp.com/api/";
+        var API_BASE = "https://workout-application-server.herokuapp.com/api/";
         var userDefinitions = [];
 
         var setAuthHeader = function(sessionToken) {
