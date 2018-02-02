@@ -1,0 +1,76 @@
+/* main css */
+* {
+    width: 100%;
+}
+html {
+    background-image: url(https://images.unsplash.com/photo-1427384906349-30452365b5e8?ixlib=rb-0.3.5&s=1b4532c13a1fa6ac6e81f1a201117daf&auto=format&fit=crop&w=667&q=80);
+    background-size: cover;
+    height: 100% !important;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body {
+    width: 40%;
+    margin: 5% auto;
+    padding: 2%;
+    border-radius: 5px;
+    border: 5px solid rgb(11, 36, 68);
+    background-color: #fff; 
+   
+}
+
+
+
+form {
+    width: 80%;
+    margin: 0 auto;  
+   
+    
+}
+
+.loginArea {
+    text-align: center;
+}
+
+.signupButton {
+    text-align: right;
+   margin: 5% 0;
+}
+
+.tagLine {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.memberText {
+    font-size: 10px;
+}
+
+.loginButton {
+    width: auto;
+}
+
+
+/* Login Modal Styling */
+.close {
+    text-align: left;
+}
+.modal-title {
+    text-align: center;
+}
+
+h4 {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.modal-dialog {
+    width: 80%;
+    top: 10%;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 5px solid rgb(11, 36, 68);
+}
