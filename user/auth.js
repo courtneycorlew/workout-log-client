@@ -28,6 +28,7 @@ $(function() {
                     console.log("Thanks for being my friend!")
                     console.log(data.sessionToken);
                     window.location.href = "/dashboard.html";
+                    WorkoutLog.definition.setDefinitions();
                 }
 
                 // $("#signup-modal").modal("hide");
@@ -74,6 +75,7 @@ $(function() {
                     WorkoutLog.log.fetchAll();
                     console.log(data.sessionToken)
                     window.location.href = "/dashboard.html";
+                    WorkoutLog.definition.setDefinitions();
                 }
 
                 $("#login-modal").modal("hide");

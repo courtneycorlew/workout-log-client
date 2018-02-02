@@ -3,6 +3,27 @@ $(function() {
 		definition: {
 			userDefinitions: [],
 
+
+			setDefinitions: function() {
+				console.log('Made it to set Defintions!')
+				var definition = WorkoutLog.definition.userDefinitions;
+				// console.log(history[1].id)
+				// console.log(WorkoutLog.definition.userDefinitions)
+				
+				var definitions = definition.length;
+				// let definitions = WorkoutLog.definition.userDefinitions;
+				// console.log(definitions)
+				var lis = "";
+					for (var i = 0; i < definitions; i++) {
+					lis += '<div class="card"><div class="card-body">' + 
+					definition[i].description + 	
+					"</div></div>";					
+				}
+				$(".card-columns").children().remove();
+				$(".card-columns").append(lis);
+				
+			},
+
 			create: function() {
 
 				var def = { 
@@ -21,13 +42,13 @@ $(function() {
 					  WorkoutLog.definition.userDefinitions.push(data.definition);
 					 
 					  console.log(data.definition.description);
-					  let definition = data.definition.description;
+					//   let definition = data.definition.description;
 					//   localStorage.setItem("definition", definition)
 					//   let definitions = localStorage.getItem("definitions")
-					  let card = $(`<div class="card mb-3"> </div>`);
-					  let workoutTitle = $(`<div class="card-body">${definition}</a></div>`)             
-					  card.append(workoutTitle)
-					  $('.card-columns').append(card)
+					//   let card = $(``);
+					//   let workoutTitle = $(``)             
+					//   card.append(workoutTitle)
+					//   $('.card-columns').append(card)
 					  $("#def-description").val("");
 					//   $("#def-logtype").val("");
 		      	});
@@ -48,6 +69,7 @@ $(function() {
 				  console.log('fetch all suceeded! ata returned is:')
 				  console.log(data)
 				 WorkoutLog.definition.userDefinitions = data;
+				 console.log(data)
 				 
 		      })
 		      .fail(function(err) {
