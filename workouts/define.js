@@ -7,7 +7,7 @@ $(function() {
 
 				var def = { 
 		         		desc: $("#def-description").val(),
-						type: $("#def-logtype").val()
+						// type: $("#def-logtype").val()
 				};
 				var postData = { definition: def };
 		      	var define = $.ajax({
@@ -20,9 +20,13 @@ $(function() {
 		      	define.done(function(data) {
 					  WorkoutLog.definition.userDefinitions.push(data.definition);
 					  console.log(data.definition);
+					  let definition = data.definition
+					  let card = $(`<div class="card text-white mb-3"> </div>`);
+					  let workoutTitle = $(`<div class="card-body">${definition}</a></div>`)             
+					  card.append(workoutTitle)
+					  $('.card-columns').append(card)
 					  $("#def-description").val("");
 					  $("#def-logtype").val("");
-					  $('a[href="#log"]').tab("show")
 					  console.log(data.definition);
 		      	});
 		  },
@@ -60,6 +64,7 @@ $(function() {
     if (window.localStorage.getItem("sessionToken")) {
       WorkoutLog.definition.fetchAll();
    }
+
    
 
 });

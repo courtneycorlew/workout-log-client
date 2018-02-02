@@ -1,0 +1,33 @@
+body {
+    width: 90%;
+    margin: 0 auto;
+   
+}
+
+.container {
+    border:5px solid #00a3b6;
+    padding: 5%;
+}
+
+
+.applicationTitle {
+    font-size: 1.5em;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+a {
+    color: #00a3b6;
+    margin: 2%;
+}
+
+a:hover {
+    background-color: #00a3b6;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.workoutHeader {
+    text-align: center;
+    text-transform: uppercase;
+}
