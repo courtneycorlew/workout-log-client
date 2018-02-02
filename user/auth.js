@@ -27,7 +27,7 @@ $(function() {
                     WorkoutLog.log.fetchAll();
                     console.log("Thanks for being my friend!")
                     console.log(data.sessionToken);
-                    window.location.href = "https://www.google.com";
+                    window.location.href = "https://workout-application-client.herokuapp.com/dashboard.html";
                 }
 
                 // $("#signup-modal").modal("hide");
@@ -73,7 +73,7 @@ $(function() {
                     WorkoutLog.definition.fetchAll();
                     WorkoutLog.log.fetchAll();
                     console.log(data.sessionToken)
-                    window.location.href = "https://www.google.com";
+                    window.location.href = "https://workout-application-client.herokuapp.com/dashboard.html";
                 }
 
                 $("#login-modal").modal("hide");
