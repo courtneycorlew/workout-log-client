@@ -19,15 +19,14 @@ $(function() {
 
 		      	define.done(function(data) {
 					  WorkoutLog.definition.userDefinitions.push(data.definition);
-					  console.log(data.definition);
-					  let definition = data.definition
+					  console.log(data.description);
+					  let definition = data.description
 					  let card = $(`<div class="card text-white mb-3"> </div>`);
 					  let workoutTitle = $(`<div class="card-body">${definition}</a></div>`)             
 					  card.append(workoutTitle)
 					  $('.card-columns').append(card)
 					  $("#def-description").val("");
 					  $("#def-logtype").val("");
-					  console.log(data.definition);
 		      	});
 		  },
 
