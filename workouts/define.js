@@ -19,8 +19,8 @@ $(function() {
 
 		      	define.done(function(data) {
 					  WorkoutLog.definition.userDefinitions.push(data.definition);
-					  console.log(data.description);
-					  let definition = data.description
+					  console.log(data.definition.description);
+					  let definition = data.definition.description
 					  let card = $(`<div class="card text-white mb-3"> </div>`);
 					  let workoutTitle = $(`<div class="card-body">${definition}</a></div>`)             
 					  card.append(workoutTitle)
