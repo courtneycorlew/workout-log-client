@@ -4,21 +4,21 @@ $(function() {
 			workouts: [],
 			idBeingUpdated: '',
 
-			setDefinitions: function() {
-				var defs = WorkoutLog.definition.userDefinitions;
-				var len = defs.length;
-				console.log(len);
-				var opts;
-				for (var i = 0; i < len; i++) {
-					opts += "<option value='" + defs[i].id +"'>" + defs[i].description + "</option>";
-				}
-				$("#log-definition").children().remove();
-				$("#log-definition").append(opts);
-				$("#update-definition").children().remove();
-				$("#update-definition").append(opts);
+			// setDefinitions: function() {
+			// 	var defs = WorkoutLog.definition.userDefinitions;
+			// 	var len = defs.length;
+			// 	console.log(len);
+			// 	var opts;
+			// 	for (var i = 0; i < len; i++) {
+			// 		opts += "<option value='" + defs[i].id +"'>" + defs[i].description + "</option>";
+			// 	}
+			// 	$("#log-definition").children().remove();
+			// 	$("#log-definition").append(opts);
+			// 	$("#update-definition").children().remove();
+			// 	$("#update-definition").append(opts);
 
 				
-			},
+			// },
 
 			setHistory: function() {
 				var history = WorkoutLog.log.workouts;
@@ -46,7 +46,7 @@ $(function() {
 			},
 			create: function() {
 				var itsLog = { 
-		        	desc: $("#log-description").val(),
+		        	description: $("#log-description").val(),
 		         	result: $("#log-result").val(),
 		         	def: $("#log-definition option:selected").text()
 		      	};
@@ -82,10 +82,10 @@ $(function() {
 					idBeingUpdated = logID;
 					console.log('data returned is:');
 					console.log(data.def);
-					
 					$('a[href="#update-log"]').tab("show");
 					$('#update-result').val(data.result);
 					$('#update-description').val(data.description);
+					console.log(data.description)
 					$('#update-id').val(data.id);
 				});
 

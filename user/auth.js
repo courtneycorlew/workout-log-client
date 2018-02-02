@@ -27,9 +27,11 @@ $(function() {
                     WorkoutLog.log.fetchAll();
                     console.log("Thanks for being my friend!")
                     console.log(data.sessionToken);
+                    window.location.href = "/dashboard.html";
+                    WorkoutLog.definition.setDefinitions();
                 }
 
-                $("#signup-modal").modal("hide");
+                // $("#signup-modal").modal("hide");
                 $(".disabled").removeClass("disabled");
                 $("#loginout").text("Logout");
                 $("#su_username").val("");
@@ -72,6 +74,8 @@ $(function() {
                     WorkoutLog.definition.fetchAll();
                     WorkoutLog.log.fetchAll();
                     console.log(data.sessionToken)
+                    window.location.href = "/dashboard.html";
+                    WorkoutLog.definition.setDefinitions();
                 }
 
                 $("#login-modal").modal("hide");

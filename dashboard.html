@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Workout Log</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <nav class="navbar nav navigationBar">
+        <h3 class="applicationTitle">Workout Log Application</h3>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+              <a href="#home" id="loginout" class="nav-link login button">Settings</a>
+          </li> 
+          <li class="nav-item">
+              <a href="#history" class="nav-link" >History</a>
+          </li>
+          <li class="nav-item">
+              <a href="#" class="nav-link">Friends</a>
+          </li>
+        </ul>  
+      </nav>
+  
+    <div class="wrapper">
+
+        <div class="container">
+            <div class="row">
+                <div class="float-left"><p class="workoutHeader">Workouts
+                <button type="button" data-toggle="modal" data-target="#add-modal" class="btn btn-outline-info btn-sm">+new</button>
+                </p>
+                </div>
+            
+                <!-- Add a workout modal -->
+                <div class="modal fade" id="add-modal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <!-- <h4 class="modal-title" id="define"></h4>Define</h4> -->
+                        </div>
+                        <div class="modal-body">
+                            <label for="def-description">What kind of workout did you do? </label>
+                            <textarea class="form-control" id="def-description" rows="3"  placeholder="run, walk, yoga..."></textarea>
+                            <!-- <label for="def-logtype">Log work by</label>
+                            <select class="form-control" id="def-logtype">
+                            <option>Time</option>
+                            <option>Weight</option>
+                            <option>Reps</option>
+                            </select> -->
+                        </div>
+                        <div class="modal-footer">
+                            <button id="def-save" type="button" class="btn btn-info">Save</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="card-columns">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+          
+ <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+ <script src="./app.js"></script>
+ <script src="./user/auth.js"></script>
+ <script src="./workouts/define.js"></script>
+ <script src="./workouts/log.js"></script>
+
+</body>
+</html>
