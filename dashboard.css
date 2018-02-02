@@ -4,9 +4,8 @@ body {
    
 }
 
-.container {
-    border:5px solid #00a3b6;
-    padding: 5%;
+.wrapper {
+        padding: 5%;
 }
 
 
